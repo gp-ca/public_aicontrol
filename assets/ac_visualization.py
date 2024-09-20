@@ -56,9 +56,9 @@ def cell_network_graph_dqa(node_data, color_dict):
               'TP': 'TP',
               'T4P': 'T4P',
               'T8P': 'T8P',
-              'NKTP': 'NKTP',
-              'NKT4P': 'NKT4P',
-              'NKT8P': 'NKT8P',
+              'NKTP': '!',
+              'NKT4P': '!',
+              'NKT8P': '!',
               'BPNKP': '!'}
 
     node_colors = color_dict.values()
@@ -104,7 +104,7 @@ def hist_standard_ranges(summed_expert1, cell_subsets_of_interst,
                 ))[[celltype]] * 100
 
         # Select subplot
-        ax = axs[i//2, i%2]
+        ax = axs[i//2, i % 2]
         # Create histogram
         counts, bins, patches = ax.hist(ratio, bins=12, alpha=0.7,
                                         color=color_dict[celltype],
@@ -242,8 +242,8 @@ def cell_network_graph_mqa(node_data, color_dict):
               'TP': 'TP',
               'T4P': 'T4P',
               'T8P': 'T8P',
-              'NKTP': 'NKTP',
-              'NKT4P': 'NKT4P'}
+              'NKTP': '!',
+              'NKT4P': '!'}
 
     node_colors = color_dict.values()
 

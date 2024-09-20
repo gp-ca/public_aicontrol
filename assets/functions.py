@@ -48,6 +48,19 @@ for i in range(10):
     cheat_sheet.append([i, named_channels[i], fluorochromes])
 pd.DataFrame(cheat_sheet)
 
+marker_dict = {
+    'FSC-A': 'FSC-A',
+    'SSC-A': 'SSC-A',
+    'Anti-HLA-DR': 'FITC-A',
+    'CD38': 'PE-A',
+    'CD8': 'PerCP-A',
+    'CD16+56': 'PE-Cy7-A',
+    'CD19': 'APC-A',
+    'CD45': 'APC-H7-A',
+    'CD4': 'Pacific Blue-A',
+    'CD3': 'AmCyan-A'
+}
+
 
 def preprocess_raw_data(fcs_data, labels, index):
     df1 = pd.concat({'measurement_data_compensated':
